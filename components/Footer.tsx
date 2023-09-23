@@ -4,45 +4,37 @@ export default function Footer() {
   return (
     <footer className="text-center h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3 border-gray-500">
       <div className="text-gray-500">
-        Powered by{" "}
+        Built by{" "}
         <a
-          href="https://replicate.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="font-bold hover:underline transition hover:text-gray-300 underline-offset-2"
-        >
-          Replicate,{" "}
-        </a>
-        <a
-          href="https://upload.io"
+          href="https://ihscompsci.github.io/"
           target="_blank"
           rel="noreferrer"
           className="font-bold hover:underline hover:text-gray-300 transition underline-offset-2"
         >
-          Upload,{" "}
+          Computer Science Club,{" "}
         </a>
         and{" "}
         <a
-          href="https://vercel.com/"
+          href="https://ihs.hackclub.com/"
           target="_blank"
           rel="noreferrer"
           className="font-bold hover:underline transition hover:text-gray-300 underline-offset-2"
         >
-          Vercel.
+          Irvington Hack Club.
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
           href="https://ihsvikings.org"
           className="group"
-          aria-label="TaxPal on Twitter"
+          aria-label="Irvington Website"
         >
           <svg className="h-6 w-6 fill-gray-500 group-hover:fill-gray-300" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Z"></path></svg>
         </Link>
         <Link
           href="https://github.com/viking-hacks"
           className="group"
-          aria-label="TaxPal on GitHub"
+          aria-label="Github"
         >
           <svg
             aria-hidden="true"
