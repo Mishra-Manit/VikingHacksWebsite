@@ -4,9 +4,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 
+const details = [
+  { id: 1, name: 'A one day event on', value: 'Feb 3rd' },
+  { id: 2, name: "Hosted at", value: 'Irvington High' },
+  { id: 3, name: "We ❤️ Beginners", value: "Join us!" },
+]
+
 export default function HomePage() {
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
         <a
@@ -27,7 +33,7 @@ export default function HomePage() {
           Elevate.
         </h1>
         <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
-        Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
+          Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
           className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
@@ -35,10 +41,22 @@ export default function HomePage() {
         >
           Register for 2024!
         </Link>
-        
-      </main>
+        <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            {details.map((detail) => (
+              <div key={detail.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt className="text-base leading-7 text-gray-300">{detail.name}</dt>
+                <dd className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+                  {detail.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
 
-      
+      </main>
       <Footer />
     </div>
   );
