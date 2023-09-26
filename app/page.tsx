@@ -16,7 +16,7 @@ export default function HomePage() {
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
         <a
-          href="#"
+          href="https://cloud-jeay2ufps-hack-club-bot.vercel.app/0viking_hacks_2024_sponsorship_prospectus.pdf"
           target="_blank"
           rel="noreferrer"
           className="border border-gray-600 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out"
@@ -37,9 +37,9 @@ export default function HomePage() {
         </h2>
         <Link
           className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
-          href="/register"
+          href="#"
         >
-          Register for 2024!
+          Registration Coming Soon!
         </Link>
         <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
