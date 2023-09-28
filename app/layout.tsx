@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 let title = "Viking Hacks";
 let description = "Generate your dream room in seconds.";
-let ogimage = "https://roomgpt-demo.vercel.app/og-image.png";
+let ogimage = "https://cloud-n7euqf935-hack-club-bot.vercel.app/0vikinghackswebsitebg.png";
 let sitename = "vikinghacks.com";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: [ogimage],
     title,
     description,
-    url: "https://roomgpt-demo.vercel.app",
+    url: "https:vikinghacks.vercel.app",
     siteName: sitename,
     locale: "en_US",
     type: "website",
