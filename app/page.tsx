@@ -19,10 +19,10 @@ export default function HomePage() {
           href="https://cloud-jeay2ufps-hack-club-bot.vercel.app/0viking_hacks_2024_sponsorship_prospectus.pdf"
           target="_blank"
           rel="noreferrer"
-          className="border border-gray-600 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out"
+          className="border border-gray-400 rounded-3xl py-2 px-4 text-gray-200 text-sm mb-5 transition duration-300 ease-in-out"
         >
           Now accepting {" "}
-          <span className="text-blue-600 hover:underline">sponsors</span>
+          <span className="text-blue-500 hover:underline">sponsors</span>
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
           Create. {" "}
@@ -37,10 +37,10 @@ export default function HomePage() {
         </h2>
         <Link
           // className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
-          className="bg-slate-700 ring-1 ring-slate-400 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
+          className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="#"
         >
-          Coming soon...
+          Stay tuned...
         </Link>
         <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
