@@ -36,10 +36,11 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
-          className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          // className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="bg-slate-700 ring-1 ring-slate-400 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="#"
         >
-          Registration Coming Soon!
+          Coming soon...
         </Link>
         <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
