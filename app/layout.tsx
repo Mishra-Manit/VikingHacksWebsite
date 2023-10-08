@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import "../styles/globals.css";
 
 let title = "Viking Hacks";
-let description = "Generate your dream room in seconds.";
+let description = "Join us for the first hackathon hosted at Irvington High School";
 let ogimage = "https://cloud-n7euqf935-hack-club-bot.vercel.app/0vikinghackswebsitebg.png";
 let sitename = "vikinghacks.com";
 
