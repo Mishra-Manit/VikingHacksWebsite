@@ -21,8 +21,8 @@ export default function HomePage() {
           rel="noreferrer"
           className="border border-gray-400 rounded-3xl py-2 px-4 text-gray-200 text-sm mb-5 transition duration-300 ease-in-out"
         >
-          Now accepting {" "}
-          <span className="text-blue-500 hover:underline">sponsors</span>
+          Sponsorship Prospectus {" "}
+          <span className="text-blue-500 hover:underline">here</span>
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
           Create. {" "}
