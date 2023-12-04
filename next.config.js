@@ -8,6 +8,12 @@ module.exports = {
         destination: 'https://hcb.hackclub.com/donations/start/viking-hacks',
         permanent: true,
       },
+
+      {
+        source: '/python',
+        destination: 'https://forms.gle/xfqgW4Naupcxi2GU8',
+        permanent: true,
+      },
     ]
   },
   images: {
