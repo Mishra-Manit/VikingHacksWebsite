@@ -14,11 +14,11 @@ const ComingSoon: React.FC = () => {
       
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-          Registration.
+          Registration
         </h1>
 
         <h2 className="pb-10 mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-400 leading-7">
-          contact <a href="mailto:hello@vikinghacks.com" className="text-blue-500 hover:text-blue-600">
+          Contact <a href="mailto:hello@vikinghacks.com" className="text-blue-500 hover:text-blue-600">
                       hello@vikinghacks.com 
                   </a> {" "}
           with any questions or concerns
