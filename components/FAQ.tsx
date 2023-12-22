@@ -14,13 +14,12 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
   const contentRef = useRef(null);
 
   const toggleAnswer = () => {
-    setIsAnswerShowing(prev => !prev);
-    // After state update, wait for the next update cycle to get the new height
-    setTimeout(() => {
-      setHeight(
-        isAnswerShowing ? 0 : contentRef.current?.scrollHeight || 0
-      );
-    }, 0);
+    setIsAnswerShowing((prev) => {
+      // Calculate the height based on the current state before the toggle
+      const newHeight = prev ? 0 : contentRef.current?.scrollHeight || 0;
+      setHeight(newHeight);
+      return !prev;
+    });
   };
 
   return (
