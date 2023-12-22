@@ -4,7 +4,7 @@ module.exports = {
   redirects: async() => {
     return [
       {
-        source: '/pay',
+        source: '/donate',
         destination: 'https://hcb.hackclub.com/donations/start/viking-hacks',
         permanent: true,
       },

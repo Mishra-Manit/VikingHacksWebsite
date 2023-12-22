@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 
+import FAQs from '../components/FAQs';
+
 const details = [
   { id: 1, name: 'A one day event on', value: 'Feb 3rd' },
   { id: 2, name: "Hosted at", value: 'Irvington High' },
@@ -38,9 +40,9 @@ export default function HomePage() {
         <Link
           // className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
           className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
-          href="https://vikinghacks.com/prospectus.pdf"
+          href="/register"
         >
-          Sponsorship Prospectus
+          Register Now!
         </Link>
         <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -56,6 +58,8 @@ export default function HomePage() {
           </dl>
         </div>
       </div>
+
+      <FAQs />
 
       </main>
       <Footer />
