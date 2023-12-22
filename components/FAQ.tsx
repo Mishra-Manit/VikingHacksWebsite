@@ -16,8 +16,8 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
   const toggleAnswer = () => {
     setIsAnswerShowing((prev) => {
       // Calculate the height based on the current state before the toggle
-      const newHeight = prev ? 0 : contentRef.current?.scrollHeight || 0;
-      setHeight(newHeight);
+      //const newHeight = prev ? 0 : contentRef.current?.scrollHeight || 0;
+      //setHeight(newHeight);
       return !prev;
     });
   };
