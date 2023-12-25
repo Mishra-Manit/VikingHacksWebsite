@@ -21,9 +21,9 @@ export default function HomePage() {
           href="https://vikinghacks.com/prospectus.pdf"
           target="_blank"
           rel="noreferrer"
-          className="border border-gray-400 rounded-3xl py-2 px-4 text-gray-200 text-sm mb-5 transition duration-300 ease-in-out"
+          className="border border-gray-500 rounded-3xl py-2 px-4 text-gray-200 text-sm mb-5 transition duration-300 ease-in-out"
         >
-          Now accepting {" "}
+          Thank you to our {" "}
           <span className="text-blue-500 hover:underline">sponsors</span>
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
@@ -38,11 +38,11 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
-          // className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
-          className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
+          className="bg-blue-600 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="/register"
         >
-          Register Now!
+          Register now
         </Link>
         <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
