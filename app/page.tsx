@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      
+      <FAQs />
 
       </main>
       <Footer />

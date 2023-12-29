@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 interface FAQProps {
@@ -10,17 +10,21 @@ interface FAQProps {
 
 const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
-  const [height, setHeight] = useState(0);
-  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0); // Re-add this line to declare the height state
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const toggleAnswer = () => {
-    setIsAnswerShowing((prev) => {
-      // Calculate the height based on the current state before the toggle
-      //const newHeight = prev ? 0 : contentRef.current?.scrollHeight || 0;
-      //setHeight(newHeight);
-      return !prev;
-    });
+    setIsAnswerShowing(prev => !prev);
   };
+
+  // useEffect hook to handle height transition
+  useEffect(() => {
+    if (isAnswerShowing && contentRef.current) {
+      setHeight(contentRef.current.scrollHeight); // Set height to the scrollHeight of the content
+    } else {
+      setHeight(0); // Set height back to 0
+    }
+  }, [isAnswerShowing]); // This effect runs whenever isAnswerShowing changes
 
   return (
     <article
@@ -44,7 +48,7 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
         style={{ maxHeight: `${height}px` }}
         className="overflow-hidden transition-max-height duration-400 ease-linear"
       >
-        {isAnswerShowing && <p className="mt-6 text-white text-left">{answer}</p>}
+        <p className="mt-6 text-white text-left">{answer}</p>
       </div>
     </article>
   );
