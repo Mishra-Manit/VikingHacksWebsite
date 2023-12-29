@@ -10,21 +10,21 @@ interface FAQProps {
 
 const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
   const [isAnswerShowing, setIsAnswerShowing] = useState(false);
-  const [height, setHeight] = useState(0); // Re-add this line to declare the height state
+  const [height, setHeight] = useState(0); 
   const contentRef = useRef<HTMLDivElement>(null);
 
   const toggleAnswer = () => {
     setIsAnswerShowing(prev => !prev);
   };
 
-  // useEffect hook to handle height transition
+
   useEffect(() => {
     if (isAnswerShowing && contentRef.current) {
-      setHeight(contentRef.current.scrollHeight); // Set height to the scrollHeight of the content
+      setHeight(contentRef.current.scrollHeight); 
     } else {
-      setHeight(0); // Set height back to 0
+      setHeight(0); 
     }
-  }, [isAnswerShowing]); // This effect runs whenever isAnswerShowing changes
+  }, [isAnswerShowing]);
 
   return (
     <article
