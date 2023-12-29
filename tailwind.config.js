@@ -6,6 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'mono': ['Space Mono']
+    },
     extend: {
       screens: {
         xs: "330px",

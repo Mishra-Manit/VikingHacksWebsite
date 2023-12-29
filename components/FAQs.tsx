@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQ from './FAQ';
+import SquigglyLines from "../components/SquigglyLines";
 
 const faqsData = [
   {
@@ -66,9 +67,15 @@ const faqsData = [
 
 const FAQs: React.FC = () => {
   return (
-    <section className="w-full pt-1">
+    <section className="w-full py-1 mb-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl pb-6 font-bold text-center text-white mb-8">FAQs</h2>
+        {/* <h2 className="text-6xl pb-6 font-bold text-center text-white mb-8">FAQs</h2> */}
+        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl mb-10">
+          <span className="relative whitespace-nowrap text-white">
+            <SquigglyLines />
+            <span className="relative">FAQs</span>
+          </span>{" "}
+        </h1>
         <div className="grid items-start auto-columns-auto grid-cols-1 md:grid-cols-2 gap-8">
           {faqsData.map(faq => (
             <FAQ key={faq.id} question={faq.question} answer={faq.answer} />

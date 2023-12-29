@@ -7,9 +7,9 @@ import SquigglyLines from "../components/SquigglyLines";
 import FAQs from '../components/FAQs';
 
 const details = [
-  { id: 1, name: 'A one day event on', value: 'Feb 3rd' },
-  { id: 2, name: "Hosted at", value: 'Irvington High' },
-  { id: 3, name: "We ❤️ Beginners", value: "Join us!" },
+  { id: 1, name: 'One day event on', value: '2.3.2024' },
+  { id: 2, name: "We ❤️ Beginners", value: "Free" },
+  { id: 3, name: "Hosted at", value: 'Irvington' },
 ]
 
 export default function HomePage() {
@@ -38,29 +38,29 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
-          className="bg-blue-600 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="bg-blue-600 rounded-3xl text-white font-mono font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
           // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="/register"
         >
           Register now
         </Link>
-        <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-            {details.map((detail) => (
-              <div key={detail.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                <dt className="text-base leading-7 text-gray-300">{detail.name}</dt>
-                <dd className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-                  {detail.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
+        <hr className="my-10 md:my-16 border-gray-600 w-full"/>
+        <div className="py-10 sm:py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+              {details.map((detail) => (
+                <div key={detail.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt className="text-base leading-7 text-gray-300">{detail.name}</dt>
+                  <dd className="text-5xl font-mono font-semibold tracking-tight text-white md:text-5xl">
+                    {detail.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
-      </div>
-
-      <FAQs />
-
+        <hr className="my-10 md:my-16 border-gray-600 w-full"/>
+        <FAQs />
       </main>
       <Footer />
     </div>
