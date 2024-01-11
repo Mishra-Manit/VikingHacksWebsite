@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react';
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 
 interface FAQProps {
   question: string;
@@ -28,7 +28,21 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
 
   return (
     <article
-      className="bg-gray-500 p-8 rounded-lg cursor-pointer transition-all duration-500 ease-linear hover:bg-gray-600"
+      className="
+      bg-zinc-800 
+      p-8 
+      rounded-lg 
+      cursor-pointer 
+      transition-all 
+      duration-200 
+      ease-linear 
+      border-2
+      border-zinc-600
+      border-dashed
+      hover:bg-zinc-700
+      hover:border-solid
+      hover:border-zinc-600
+      "
       onClick={toggleAnswer}
     >
       <div className="flex justify-between items-center">
@@ -40,7 +54,7 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
             toggleAnswer();
           }}
         >
-          {isAnswerShowing ? <AiOutlineMinus /> : <AiOutlinePlus />}
+          {isAnswerShowing ? <AiFillCaretUp /> : <AiFillCaretDown />}
         </button>
       </div>
       <div
