@@ -12,6 +12,8 @@ const details = [
   { id: 3, name: "Hosted at", value: 'Irvington' },
 ]
 
+const cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
+
 export default function HomePage() {
   return (
     <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
@@ -38,11 +40,13 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
-          className="bg-blue-600 rounded-3xl text-white font-mono font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="bg-blue-600 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
           // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="/register"
         >
-          Register now
+          <span className="font-mono">
+            Register now
+          </span>
         </Link>
         <hr className="my-10 md:my-16 border-gray-600 w-full"/>
         <div className="py-10 sm:py-20">

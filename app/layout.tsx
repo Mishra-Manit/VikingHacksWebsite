@@ -7,6 +7,9 @@ let description = "Join us for the first hackathon hosted at Irvington High Scho
 let ogimage = "https://cloud-n7euqf935-hack-club-bot.vercel.app/0vikinghackswebsitebg.png";
 let sitename = "vikinghacks.com";
 
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+
 export const metadata: Metadata = {
   title,
   description,
@@ -30,13 +33,18 @@ export const metadata: Metadata = {
   },
 };
 
+const cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cx(
+			GeistSans.variable,
+			GeistMono.variable
+		)}>
       <body className="bg-[#17181C] text-white">
         {children}
         <Analytics />
