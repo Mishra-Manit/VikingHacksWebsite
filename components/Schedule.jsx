@@ -168,7 +168,7 @@ export default function Schedule(props) {
 
     const isLastVisible = (index) => index === visibleCount - 1 && index !== eventList.length - 1;
     return (
-        <>
+        <div className="my-20">
             <ul className="w-full md:w-auto space-y-4">
                 {eventList.slice(0, visibleCount).map((event, index) => (
                     <EventItem
@@ -181,20 +181,21 @@ export default function Schedule(props) {
                 ))}
             </ul>
             <button onClick={toggleItemsVisibility} className="
-                w-full
-                md:w-1/2
+                w-auto
                 border 
-                hover:bg-neutral-800
-                hover:border-dashed
+                text-sm
+                bg-neutral-800
+                hover:bg-neutral-700/60
                 border-neutral-700
+                hover:border-neutral-600
                 rounded-lg
                 py-2
                 px-4 
                 mt-4
                 transition-all
             ">
-                {isExpanded ? 'Show less' : 'Show more'}
+                {isExpanded ? 'Show Less' : 'Show More'}
             </button>
-        </>
+        </div>
     );
 }

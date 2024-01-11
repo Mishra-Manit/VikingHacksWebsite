@@ -3,15 +3,15 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
+import Balancer from 'react-wrap-balancer'
 
+import Details from '../components/Details';
 import Sponsors from '../components/Sponsors';
 import FAQs from '../components/FAQs';
 import ScheduleList from '../components/Schedule';
 
-const details = [
-  { id: 1, name: 'One day event on', value: '2.3.2024' },
-  { id: 2, name: "We ❤️ Beginners", value: "Free" },
-  { id: 3, name: "Hosted at", value: 'Irvington' },
+const actionVerbs = [
+  "Create", "Innovate", "Elevate", "Invent", "Plan", "Develop", "Revolutionize", "Improvise", "Design", "Evolve"
 ]
 
 const cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
@@ -20,15 +20,49 @@ export default function HomePage() {
   return (
     <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient pointer-events-auto">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-40 mt-20 background-gradient pointer-events-auto">
         <a
           href="https://vikinghacks.com/prospectus.pdf"
           target="_blank"
           rel="noreferrer"
-          className="border border-gray-500 rounded-3xl py-2 px-4 text-gray-200 text-sm mb-5 transition duration-300 ease-in-out"
+          className="
+          group
+          border 
+          border-neutral-700/50 
+          hover:border-neutral-600/60
+          bg-neutral-800 
+          hover:bg-neutral-800/80
+          rounded-3xl 
+          py-2 
+          pl-2
+          pr-4
+          text-gray-200 
+          text-sm 
+          mb-5 
+          transition 
+          duration-300 
+          ease-in-out
+          flex
+          items-center
+          gap-2
+          "
         >
-          Thank you to our {" "}
-          <span className="text-blue-500 hover:underline">sponsors</span>
+          <div className="
+          rounded-full 
+          border 
+          border-blue-500/70
+          bg-blue-500/20
+          text-xs
+          py-1
+          px-2">
+            Sponsors
+          </div>
+          <p>
+            Thank you for your support
+          </p>
+          <p className="group-hover:translate-x-1 transition-all">
+            →
+            </p>
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
           Create. {" "}
@@ -38,57 +72,77 @@ export default function HomePage() {
           </span>{" "}
           Elevate.
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
+        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-neutral-200  text-gray-500 leading-7">
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
           className="
           group
           bg-blue-600 
-          border-2
+          border
           border-solid
           cursor-pointer
           border-blue-400
-          rounded-3xl 
+          rounded-2xl 
           text-white 
-          font-medium 
-          px-8 py-3 
+          font-light
+          px-8 py-2
           sm:mt-10 
           mt-8 
           hover:scale-105
-          hover:bg-blue-500 
+          hover:bg-blue-600/80 
           hover:shadow-lg
-          hover:shadow-blue-500/50
+          hover:shadow-blue-600/50
+          duration-75
           transition"
           // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="/register"
         >
-          <span className="font-mono transition-all duration-75">
-            Register now
+          <span className="flex gap-2 items-center text-lg transition-all duration-75">
+            Register for free
           </span>
         </Link>
         {/* <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/> */}
         <Sponsors />
-        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
-        <div className="py-4 sm:py-10">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-              {details.map((detail) => (
-                <div key={detail.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
-                  <dt className="text-base leading-7 text-gray-300">{detail.name}</dt>
-                  <dd className="text-5xl font-mono font-semibold tracking-tight text-white md:text-5xl">
-                    {detail.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
+        {/* <hr className="my-10 md:my-16 border-dashed bg-opacity-0 border-gray-600 w-full"/> */}
+        <Details />
+        {/* <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/> */}
         <ScheduleList />
-        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
-        {/* The FAQ questions are here */}
         <FAQs />
+        <hr className="my-10 md:my-16 border-gray-600/30 w-screen" />
+        <div className="my-16 mb-28 text-3xl">
+          <span className="opacity-60">
+            <Balancer>
+              Challenge accepted.
+            </Balancer>
+          </span>{" "}
+          <Balancer ratio={1}>
+            Code like a Viking.
+          </Balancer>
+          <br /><br />
+          <Link
+            className="
+            px-8 py-3
+            text-lg
+          bg-blue-600 
+          hover:bg-blue-600/90
+          border
+          border-solid
+          cursor-pointer
+          border-blue-400
+          rounded-2xl 
+          text-white 
+          font-light
+          transition-all
+          "
+            href="/register"
+          >
+            <span>
+              Register for free
+            </span>
+          </Link>
+        </div>
+        {/* The FAQ questions are here */}
       </main>
       <Footer />
     </div>

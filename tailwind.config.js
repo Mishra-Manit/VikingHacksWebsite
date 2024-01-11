@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2xs': '0.3rem',
+      },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
       },
