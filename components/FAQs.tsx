@@ -70,9 +70,11 @@ const FAQs: React.FC = () => {
     <section className="w-full py-1 mb-8 p-8">
       <div className="container mx-auto">
         <h2 className="text-3xl xs:text-4xl sm:text-6xl pb-6 font-bold text-center text-white mb-8">More questions?</h2>
-        <div className="grid items-start auto-columns-auto grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {faqsData.map(faq => (
-            <FAQ key={faq.id} question={faq.question} answer={faq.answer} />
+            <div className="flex flex-col" key={faq.id}>
+              <FAQ question={faq.question} answer={faq.answer} />
+            </div>
           ))}
         </div>
       </div>

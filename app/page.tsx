@@ -50,7 +50,7 @@ export default function HomePage() {
           </span>
         </Link>
         <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
-        <div className="py-10 sm:py-20">
+        <div className="py-4 sm:py-10">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
               {details.map((detail) => (

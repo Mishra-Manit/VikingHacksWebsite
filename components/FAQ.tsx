@@ -29,20 +29,24 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
   return (
     <article
       className="
-      bg-zinc-800 
-      p-8 
-      rounded-lg 
-      cursor-pointer 
-      transition-all 
-      duration-200 
-      ease-linear 
-      border-2
-      border-zinc-600
-      border-dashed
-      hover:bg-zinc-700
-      hover:border-solid
-      hover:border-zinc-600
-      "
+        flex flex-col
+        justify-between
+        h-full         
+        bg-zinc-800 
+        p-8 
+        rounded-lg 
+        cursor-pointer 
+        transition-all 
+        duration-200 
+        ease-linear 
+        border-2
+        border-zinc-600
+        border-dashed
+        hover:bg-zinc-700
+        hover:border-solid
+        hover:border-zinc-600
+        text-left
+        "
       onClick={toggleAnswer}
     >
       <div className="flex justify-between items-center">
