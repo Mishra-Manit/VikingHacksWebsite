@@ -92,7 +92,7 @@ export default function HomePage() {
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
           Create. {" "}
-          <span className="relative whitespace-nowrap text-blue-600">
+          <span className="relative whitespace-nowrap text-blue-500">
             <SquigglyLines />
             <span className="relative">Innovate.</span>
           </span>{" "}
@@ -111,7 +111,7 @@ export default function HomePage() {
         <ScheduleList />
         <FAQs />
         <hr className="my-10 md:my-16 border-gray-600/30 w-screen" />
-        <div className="my-16 mb-28 text-3xl">
+        <div className="relative background-blur my-16 mb-28 text-3xl">
           <span className="opacity-60">
             <Balancer>
               Challenge accepted.
