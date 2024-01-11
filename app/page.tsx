@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 
+import Sponsors from '../components/Sponsors';
 import FAQs from '../components/FAQs';
 import ScheduleList from '../components/Schedule';
 
@@ -19,7 +20,7 @@ export default function HomePage() {
   return (
     <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient pointer-events-auto">
         <a
           href="https://vikinghacks.com/prospectus.pdf"
           target="_blank"
@@ -41,14 +42,33 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <Link
-          className="bg-blue-600 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="
+          group
+          bg-blue-600 
+          border-2
+          border-solid
+          cursor-pointer
+          border-blue-400
+          rounded-3xl 
+          text-white 
+          font-medium 
+          px-8 py-3 
+          sm:mt-10 
+          mt-8 
+          hover:scale-105
+          hover:bg-blue-500 
+          hover:shadow-lg
+          hover:shadow-blue-500/50
+          transition"
           // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
           href="/register"
         >
-          <span className="font-mono">
+          <span className="font-mono transition-all duration-75">
             Register now
           </span>
         </Link>
+        {/* <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/> */}
+        <Sponsors />
         <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
         <div className="py-4 sm:py-10">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
