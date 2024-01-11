@@ -7,7 +7,7 @@ const details = [
     'Viking Hacks is a one-day event that will be held on February 3rd of 2024. From start to finish, it will last 14 hours in total.' },
     { id: 2, icon: AiFillDollarCircle, name: "Completely Free", value: 
     "You heard that right. Viking Hacks covers all costs for attendees. From food, technology, to workshops—we've got it covered." },
-    { id: 3, icon: AiFillHome, name: "Irvington High School", value: 
+    { id: 3, icon: AiFillHome, name: "Irvington, CA", value: 
     'The venue will be located at Irvington High School, in Fremont, California. You can find more information about the venue location below.' },
 ]
 
@@ -37,7 +37,12 @@ export default function Details(props) {
                         hover:border-neutral-600/90
                         gap-y-4">
                             <dt className="items-center font-semibold text-xl text-neutral-0 flex gap-2">
-                                <detail.icon size={25} /> {detail.name}
+                                <div className="flex-col">
+                                    <detail.icon size={40} />
+                                    <Balancer>
+                                        <p className="text-2xl">{detail.name}</p>
+                                    </Balancer>
+                                </div>
                             </dt>
                             <dd className="
                             mt-2
