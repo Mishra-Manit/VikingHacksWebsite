@@ -4,23 +4,24 @@ import "../styles/globals.css";
 
 let title = "Viking Hacks";
 let description = "Join us for the first hackathon hosted at Irvington High School";
-let ogimage = "https://cloud-n7euqf935-hack-club-bot.vercel.app/0vikinghackswebsitebg.png";
+let ogimage = "/vikinghacks_newlogo.png";
 let sitename = "vikinghacks.com";
 
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
-  title,
-  description,
+  metadataBase: new URL('http://vikinghacks.com'),
+  title: title,
+  description: description,
   icons: {
-    icon: "/vikingwhitelogo.png",
+    icon: "/vikinghacks_newlogo.png",
   },
   openGraph: {
     images: [ogimage],
     title,
     description,
-    url: "https:vikinghacks.vercel.app",
+    url: "https://vikinghacks.vercel.app",
     siteName: sitename,
     locale: "en_US",
     type: "website",

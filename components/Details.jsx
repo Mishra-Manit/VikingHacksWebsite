@@ -13,7 +13,8 @@ const details = [
 
 export default function Details(props) {
     return (
-        <div className="w-full max-w-5xl my-20">
+        <div className="relative w-full max-w-5xl my-20 details-blur px-8">
+            <h3 className="text-left text-xs font-mono font-light opacity-40 mb-2">FULLY FUNDED BY SPONSORS</h3>
             <h1 className="text-left text-xl md:text-3xl">Resources <span className="opacity-60">
                 to help you innovate and elevate.
             </span></h1>
@@ -21,7 +22,7 @@ export default function Details(props) {
                 Viking Hacks provides all attendees with a plethora of technology and resources to accelerate their workflow.
             </p>
             <div className="py-4 sm:py-10">
-                <dl className="flex flex-col sm:flex-row text-left gap-x-3 gap-y-3">
+                <dl className="flex flex-col md:flex-row text-left gap-x-3 gap-y-3">
                     {details.map((detail) => (
                         <div key={detail.id} className="
                         bg-neutral-800/90 
@@ -39,6 +40,7 @@ export default function Details(props) {
                                 <detail.icon size={25} /> {detail.name}
                             </dt>
                             <dd className="
+                            mt-2
                             text-md 
                             font-light 
                             tracking-tight 
