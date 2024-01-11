@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
 
 import FAQs from '../components/FAQs';
+import ScheduleList from '../components/Schedule';
 
 const details = [
   { id: 1, name: 'One day event on', value: '2.3.2024' },
@@ -48,7 +49,7 @@ export default function HomePage() {
             Register now
           </span>
         </Link>
-        <hr className="my-10 md:my-16 border-gray-600 w-full"/>
+        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
         <div className="py-10 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
@@ -63,7 +64,10 @@ export default function HomePage() {
             </dl>
           </div>
         </div>
-        <hr className="my-10 md:my-16 border-gray-600 w-full"/>
+        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
+        <ScheduleList />
+        <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/>
+        {/* The FAQ questions are here */}
         <FAQs />
       </main>
       <Footer />
