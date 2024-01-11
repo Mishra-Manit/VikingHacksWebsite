@@ -16,6 +16,32 @@ const actionVerbs = [
 
 const cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
 
+function RegisterButton() {
+  return (
+    <Link
+      className="
+      px-8 py-2
+      text-lg
+    bg-blue-600 
+    hover:bg-blue-600/90
+    border
+    border-solid
+    cursor-pointer
+    border-blue-400
+    rounded-2xl 
+    text-white 
+    font-light
+    transition-all"
+      // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
+      href="/register"
+    >
+      <span className="flex gap-2 items-center text-lg transition-all duration-75">
+        Register for free
+      </span>
+    </Link>
+  )
+}
+
 export default function HomePage() {
   return (
     <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
@@ -75,33 +101,8 @@ export default function HomePage() {
         <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-neutral-200  text-gray-500 leading-7">
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
-        <Link
-          className="
-          group
-          bg-blue-600 
-          border
-          border-solid
-          cursor-pointer
-          border-blue-400
-          rounded-2xl 
-          text-white 
-          font-light
-          px-8 py-2
-          sm:mt-10 
-          mt-8 
-          hover:scale-105
-          hover:bg-blue-600/80 
-          hover:shadow-lg
-          hover:shadow-blue-600/50
-          duration-75
-          transition"
-          // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
-          href="/register"
-        >
-          <span className="flex gap-2 items-center text-lg transition-all duration-75">
-            Register for free
-          </span>
-        </Link>
+        <br />
+        <RegisterButton />
         {/* <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/> */}
         <Sponsors />
         {/* <hr className="my-10 md:my-16 border-dashed bg-opacity-0 border-gray-600 w-full"/> */}
@@ -120,6 +121,7 @@ export default function HomePage() {
             Code like a Viking.
           </Balancer>
           <br /><br />
+          {/* I have to do this because tailwind freaks out if i use a component */}
           <Link
             className="
             px-8 py-3

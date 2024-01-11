@@ -15,8 +15,8 @@ const sponsors = [
     {
         link: "https://sfbu.edu",
         image: "/sponsors/SFBU Logo.png",
-        width: 600,
-        height: 600,
+        width: 500,
+        height: 500,
     },
     {
         link: "https://1password.com",
