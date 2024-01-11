@@ -127,7 +127,7 @@ function EventItem({ time, info, details, isLastVisible }) {
             <div className="flex flex-row gap-8 items-center">
                 <div>
                     <p className="w-8 md:w-16 font-mono font-bold">{timeNumber}</p>
-                    <p className="w-8 md:w-16 text-xl sm:text-3xl opacity-20 font-mono">
+                    <p className="w-8 md:w-16 text-3xl opacity-20 font-mono">
                         {period.toUpperCase()}
                     </p>
                 </div>
