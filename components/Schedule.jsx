@@ -134,9 +134,9 @@ function EventItem({ time, info, details, isLastVisible }) {
                 <div className="font-thin">
                     <p className="font-normal text-lg">{info}</p>
                     <ul className="ml-3">
-                        {details.map((detail) => {
+                        {details.map((detail, index) => {
                             return (
-                                <div className="flex flex-row items-center gap-2">
+                                <div key={index} className="flex flex-row items-center gap-2">
                                     <span className="opacity-50">
                                         <ArrowIcon size={12} />
                                     </span>
