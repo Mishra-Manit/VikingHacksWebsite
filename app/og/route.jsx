@@ -30,11 +30,11 @@ export async function GET(req) {
             marginRight: 190,
             paddingTop: '10%',
             display: 'flex',
-            fontSize: 130,
+            fontSize: 200,
             fontFamily: 'Geist',
             letterSpacing: '-0.05em',
             fontStyle: 'normal',
-            color: 'black',
+            color: 'white',
             lineHeight: '120px',
             whiteSpace: 'pre-wrap',
           }}
