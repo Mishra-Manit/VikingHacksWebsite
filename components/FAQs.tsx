@@ -69,7 +69,7 @@ const faqsData = [
 const FAQs: React.FC = () => {
   return (
     <section className="w-full max-w-5xl py-1 my-20 p-8">
-      <div className="container mx-auto">
+      <div>
         <h3 className="text-left text-xs font-mono font-light opacity-40 mb-2">QUESTIONS AND ANSWERS</h3>
         <h1 className="text-left text-4xl md:text-3xl">We're <span className="opacity-60">
                 always here to answer your questions.

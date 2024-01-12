@@ -124,11 +124,11 @@ function EventItem({ time, info, details, isLastVisible }) {
         <li className={`relative rounded-lg bg-neutral-900 bg-opacity-0 px-8 py-4 text-left ${
             isLastVisible ? 'blur-effect' : ''
         }`}>
-            <div className="flex flex-row gap-10 md:gap-8 items-start">
+            <div className="flex flex-row gap-4 md:gap-8 items-start">
                 {/* yes, i went up 0.1rem LOLLL */}
                 <div className="flex flex-col text-center -mt-[0.1rem] justify-center">
-                    <p className="text-right w-8 md:w-20 font-mono text-xl md:text-3xl">{timeNumber}</p>
-                    <p className="text-right w-8 md:w-20 text-2xl opacity-20 font-mono">
+                    <p className="text-right w-14 md:w-20 font-mono text-xl md:text-3xl">{timeNumber}</p>
+                    <p className="text-right w-14 md:w-20 text-2xl opacity-20 font-mono">
                         {period}
                     </p>
                 </div>
