@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 let title = "Viking Hacks";
 let description = "Join us for the first hackathon hosted at Irvington High School";
-let ogimage = "/vikinghacks_newlogo.png";
+let ogimage = `https://vikinghacks.com/og?title=${"02.03.2024"}`;
 let sitename = "vikinghacks.com";
 
 import { GeistSans } from 'geist/font/sans';
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [ogimage],
     title,
     description,
-    url: "https://vikinghacks.vercel.app",
+    url: "https://vikinghacks.com",
     siteName: sitename,
     locale: "en_US",
     type: "website",

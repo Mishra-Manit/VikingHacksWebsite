@@ -12,6 +12,22 @@ import { AiFillMail } from 'react-icons/ai';
 const ComingSoon: React.FC = () => {
   return (
     <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+      <script
+				type="application/ld+json"
+				suppressHydrationWarning
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						description: "Viking Hacks website",
+						image: `https://vikinghacks.com/og?title=${"Registration"}`,
+						url: `https://vikinghacks.com/register`,
+						author: {
+							'@type': 'Person',
+							name: 'Viking Hacks',
+						},
+					}),
+				}}
+			/>
       <Header />
       
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20">
