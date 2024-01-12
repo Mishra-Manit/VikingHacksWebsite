@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const eventList = [
     {
         num: 2,
-        time: "7:00am",
+        time: "7am",
         info: "Opening Ceremony",
         details: [
             "Welcome speech, introduction of judges, mentors, and sponsors.",
@@ -22,7 +22,7 @@ const eventList = [
     },
     {
         num: 4,
-        time: "9:00am",
+        time: "9am",
         info: "Hacking Begins",
         details: [
             "Teams start on their projects.",
@@ -31,7 +31,7 @@ const eventList = [
     },
     {
         num: 5,
-        time: "11:00am",
+        time: "11am",
         info: "SFBU Workshop",
         details: [
             "Workshop presented by SFBU.",
@@ -40,7 +40,7 @@ const eventList = [
     },
     {
         num: 6,
-        time: "12:00pm",
+        time: "12pm",
         info: "Lunch Break",
         details: [
             "Lunch provided by us.",
@@ -49,7 +49,7 @@ const eventList = [
     },
     {
         num: 7,
-        time: "1:00pm",
+        time: "1pm",
         info: "Hacking Continues",
         details: [
             "Teams dive back into their projects.",
@@ -66,7 +66,7 @@ const eventList = [
     },
     {
         num: 9,
-        time: "6:00pm",
+        time: "6pm",
         info: "Dinner Break",
         details: [
             "Dinner and relaxation.",
@@ -74,7 +74,7 @@ const eventList = [
     },
     {
         num: 10,
-        time: "7:00pm",
+        time: "7pm",
         info: "Project Presentations",
         details: [
             "Teams present their projects to judges.",
@@ -92,7 +92,7 @@ const eventList = [
     },
     {
         num: 12,
-        time: "9:00pm",
+        time: "9pm",
         info: "Hackathon Concludes",
         details: [
             "Final networking and departure.",
@@ -124,22 +124,21 @@ function EventItem({ time, info, details, isLastVisible }) {
         <li className={`relative rounded-lg bg-neutral-900 bg-opacity-0 px-8 py-4 text-left ${
             isLastVisible ? 'blur-effect' : ''
         }`}>
-            <div className="flex flex-row gap-8 items-center">
-                <div>
-                    <p className="w-8 md:w-16 font-mono font-bold">{timeNumber}</p>
-                    <p className="w-8 md:w-16 text-3xl opacity-20 font-mono">
-                        {period.toUpperCase()}
+            <div className="flex flex-row gap-10 md:gap-8 items-start">
+                {/* yes, i went up 0.1rem LOLLL */}
+                <div className="flex flex-col text-center -mt-[0.1rem] justify-center">
+                    <p className="text-right w-8 md:w-20 font-mono text-xl md:text-3xl">{timeNumber}</p>
+                    <p className="text-right w-8 md:w-20 text-2xl opacity-20 font-mono">
+                        {period}
                     </p>
                 </div>
-                <div className="font-thin">
-                    <p className="font-normal text-lg">{info}</p>
-                    <ul className="ml-3">
+                <div className="font-normal">
+                    <p className="font-mono text-sm opacity-40 uppercase">{info}</p>
+                    <ul className="">
                         {details.map((detail, index) => {
                             return (
-                                <div key={index} className="flex flex-row items-center gap-2">
-                                    <span className="opacity-50">
-                                        <ArrowIcon size={12} />
-                                    </span>
+                                <div key={index} className="flex flex-row items-start gap-2">
+                                    <p className="font-mono opacity-20">{"//"}</p>
                                     {detail}
                                 </div>
                             )

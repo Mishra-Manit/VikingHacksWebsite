@@ -64,7 +64,8 @@ export default function HomePage() {
           pr-4
           text-gray-200 
           text-sm 
-          mb-5 
+          mb-10
+          md:mb-5
           transition 
           duration-300 
           ease-in-out
@@ -90,15 +91,17 @@ export default function HomePage() {
             →
             </p>
         </a>
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-          Create. {" "}
+        <div>
+        <h1 className="flex flex-col md:flex-row gap-4 mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
+          <p>Create. </p>
           <span className="relative whitespace-nowrap text-blue-500">
             <SquigglyLines />
             <span className="relative">Innovate.</span>
           </span>{" "}
-          Elevate.
+          <p>Elevate.</p>
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-neutral-200  text-gray-500 leading-7">
+        </div>
+        <h2 className="mx-auto mt-12 max-w-xl text-lg text-neutral-200 leading-7">
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <br />

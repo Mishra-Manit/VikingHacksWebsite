@@ -36,7 +36,7 @@ export default function Sponsors({ }) {
     return (
         <div className="my-28 md:my-40">
             <h2 className="text-sm mb-4 opacity-50 font-light font-mono">OUR SPONSORS</h2>
-            <div className={`flex flex-wrap md:flex-nowrap space-x-4 md:space-x-8 h-12 md:h-16`}>
+            <div className={`flex flex-wrap md:flex-nowrap justify-center space-x-4 md:space-x-8 h-12 md:h-16`}>
                 {sponsors.map((sponsor, index) => (
                     <a
                         key={index}

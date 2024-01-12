@@ -76,8 +76,9 @@ const FAQs: React.FC = () => {
             </span></h1>
             {/* this is the text body for the section info */}
           <div className="opacity-60 font-light my-3 text-md md:text-xl w-auto">
-            <h2 className="flex flex-col sm:flex-row gap-[0.2rem] justify-start pb-10 mt-2">
-              If you still have a question, you can email us at <a href="mailto:hello@vikinghacks.com" className="
+            <h2 className="flex flex-col sm:flex-row text-left gap-[0.2rem] justify-start pb-10 mt-2">
+              If you still have a question, you can email us at: 
+              <a href="mailto:hello@vikinghacks.com" className="
               flex
               items-center
               text-blue-400
