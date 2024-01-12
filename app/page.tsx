@@ -44,7 +44,7 @@ function RegisterButton() {
 
 export default function HomePage() {
   return (
-    <div className="items-center justify-center py-2 overflow-x-hidden">
+    <div className="items-center justify-center py-2">
       <script
 				type="application/ld+json"
 				suppressHydrationWarning
@@ -130,13 +130,13 @@ export default function HomePage() {
         <ScheduleList />
         <FAQs />
         <hr className="my-10 md:my-16 border-gray-600/30 w-screen" />
-        <div className="relative background-blur my-16 mb-28 text-3xl">
-          <span className="opacity-60">
+        <div className="relative my-16 mb-28 text-3xl">
+        <span className="opacity-60">
             <Balancer>
               Challenge accepted.
             </Balancer>
           </span>{" "}
-          <Balancer ratio={1}>
+          <Balancer>
             Code like a Viking.
           </Balancer>
           <br /><br />
