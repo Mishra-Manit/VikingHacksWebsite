@@ -14,9 +14,9 @@ const sponsors = [
     },
     {
         link: "https://sfbu.edu",
-        image: "/sponsors/SFBU Logo.png",
-        width: 500,
-        height: 500,
+        image: "/sponsors/SFBU.png",
+        width: 670,
+        height: 670,
     },
     {
         link: "https://1password.com",
@@ -35,8 +35,8 @@ const sponsors = [
 export default function Sponsors({ }) {
     return (
         <div className="my-28 md:my-40">
-            <h2 className="text-md opacity-50 mb-4">Our Sponsors</h2>
-            <div className="flex items-center justify-center space-x-4 md:space-x-8 h-20 md:h-[4.7rem]">
+            <h2 className="text-sm mb-4 opacity-50 font-light font-mono">OUR SPONSORS</h2>
+            <div className={`flex flex-wrap md:flex-nowrap space-x-4 md:space-x-8 h-12 md:h-16`}>
                 {sponsors.map((sponsor, index) => (
                     <a
                         key={index}
@@ -44,16 +44,13 @@ export default function Sponsors({ }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="h-full flex items-center justify-center"
-                        style={{ minWidth: 'auto' }}
                     >
                         <Image
                             src={sponsor.image}
                             alt={`Sponsor logo of ${sponsor.link}`}
                             width={sponsor.width}
                             height={sponsor.height}
-                            layout="intrinsic"
-                            objectFit="contain"
-                            className="grayscale contrast-200 sponsor-logo"
+                            className="h-15 grayscale contrast-200 hover:scale-105 duration-200 sponsor-logo transition-all"
                         />
                     </a>
                 ))}

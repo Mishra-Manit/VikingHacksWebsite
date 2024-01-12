@@ -37,13 +37,11 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
         rounded-lg 
         cursor-pointer 
         transition-all 
-        duration-200 
+        duration-100 
         ease-linear 
-        border-2
+        border
         border-zinc-600
-        border-dashed
-        hover:bg-zinc-700
-        hover:border-solid
+        hover:bg-zinc-700/60
         hover:border-zinc-600
         text-left
         "
@@ -64,7 +62,7 @@ const FAQ: React.FC<FAQProps> = ({ question, answer }) => {
       <div
         ref={contentRef}
         style={{ maxHeight: `${height}px` }}
-        className="overflow-hidden transition-max-height duration-400 ease-linear"
+        className="overflow-hidden transition-max-height duration-200 ease-linear"
       >
         <p className="mt-6 text-white text-left">{answer}</p>
       </div>

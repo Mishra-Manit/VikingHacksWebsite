@@ -44,7 +44,7 @@ function RegisterButton() {
 
 export default function HomePage() {
   return (
-    <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="max-w-7xl items-center justify-center py-2 overflow-x-hidden">
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-40 mt-20 background-gradient pointer-events-auto">
         <a

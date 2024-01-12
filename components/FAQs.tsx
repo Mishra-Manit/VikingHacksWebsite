@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillMail } from 'react-icons/ai';
 import FAQ from './FAQ';
 import SquigglyLines from "../components/SquigglyLines";
 
@@ -67,9 +68,29 @@ const faqsData = [
 
 const FAQs: React.FC = () => {
   return (
-    <section className="w-full py-1 mb-8 p-8">
+    <section className="w-full max-w-5xl py-1 my-20 p-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl xs:text-4xl sm:text-6xl pb-6 font-bold text-center text-white mb-8">More questions?</h2>
+        <h3 className="text-left text-xs font-mono font-light opacity-40 mb-2">QUESTIONS AND ANSWERS</h3>
+        <h1 className="text-left text-4xl md:text-3xl">We're <span className="opacity-60">
+                always here to answer your questions.
+            </span></h1>
+            {/* this is the text body for the section info */}
+          <div className="opacity-60 font-light my-3 text-md md:text-xl w-auto">
+            <h2 className="flex flex-col sm:flex-row gap-[0.2rem] justify-start pb-10 mt-2">
+              If you still have a question, you can email us at <a href="mailto:hello@vikinghacks.com" className="
+              flex
+              items-center
+              text-blue-400
+              gap-1
+              underline
+              decoration-dotted
+              underline-offset-4
+              transition-all
+              ">
+                hello@vikinghacks.com
+              </a>
+            </h2>
+          </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {faqsData.map(faq => (
             <div className="flex flex-col" key={faq.id}>
