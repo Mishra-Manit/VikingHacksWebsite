@@ -10,6 +10,9 @@ import Sponsors from '../components/Sponsors';
 import FAQs from '../components/FAQs';
 import ScheduleList from '../components/Schedule';
 
+import { FiHeart } from "react-icons/fi";
+import { AiOutlineInstagram } from "react-icons/ai";
+
 const actionVerbs = [
   "Create", "Innovate", "Elevate", "Invent", "Plan", "Develop", "Revolutionize", "Improvise", "Design", "Evolve"
 ]
@@ -20,23 +23,56 @@ function RegisterButton() {
   return (
     <Link
       className="
-      px-8 py-2
-      text-lg
+      px-4 py-2
+      text-md
     bg-blue-600 
     hover:bg-blue-600/90
     border
     border-solid
     cursor-pointer
     border-blue-400
-    rounded-2xl 
+    rounded-xl
     text-white 
     font-light
     transition-all"
       // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
       href="/register"
     >
-      <span className="flex gap-2 items-center text-lg transition-all duration-75">
+      <span className="flex gap-2 items-center transition-all duration-75">
         Register for free
+      </span>
+    </Link>
+  )
+}
+
+function SocialButton(props : any) {
+  return (
+    <Link
+      className="
+      flex
+      justify-center
+      items-center
+      gap-2
+      px-4 py-2
+      text-md
+    bg-neutral-800 
+    hover:bg-neutral-700/20
+    border
+    border-solid
+    cursor-pointer
+    border-neutral-700
+    hover:border-neutral-600/60
+    rounded-xl 
+    text-white 
+    font-light
+    transition-all"
+      // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
+      href={props.href}
+      target={props.target}
+    >
+      <props.icon size={15} />
+      <span className="flex gap-2 items-center transition-all duration-75">
+        {props.name}
       </span>
     </Link>
   )
@@ -62,7 +98,7 @@ export default function HomePage() {
 				}}
 			/>
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-40 mt-20 background-gradient pointer-events-auto">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-40 mt-20 pointer-events-auto">
         <a
           href="https://vikinghacks.com/prospectus.pdf"
           target="_blank"
@@ -121,7 +157,10 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <br />
-        <RegisterButton />
+        <div className="flex flex-col sm:flex-row gap-1">
+          <RegisterButton />
+          <SocialButton href="https://hcb.hackclub.com/donations/start/viking-hacks" target={"_blank"} name={"Donate"} icon={FiHeart} />
+        </div>
         {/* <hr className="my-10 md:my-16 border-dashed border-gray-600 w-full"/> */}
         <Sponsors />
         {/* <hr className="my-10 md:my-16 border-dashed bg-opacity-0 border-gray-600 w-full"/> */}

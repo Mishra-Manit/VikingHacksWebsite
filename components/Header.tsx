@@ -24,14 +24,16 @@ export default function Header() {
         justify-center 
         rounded-lg 
         border 
-        border-blue-400/50 
-        text-white px-3 py-2 text-sm shadow-md hover:bg-blue-700 bg-blue-600 font-medium transition"
-        href="https://hcb.hackclub.com/donations/start/viking-hacks"
+        border-neutral-700
+      hover:border-neutral-600/60
+        text-white px-3 py-2 text-sm shadow-md   bg-neutral-800 
+        hover:bg-neutral-700/20 font-medium transition"
+        href="https://instagram.com/vikinghacks"
         target="_blank"
         rel="noopener noreferrer"
       >
         <HCBLogo />
-        <p className="text-md">Donate</p>
+        <p className="text-md">Instagram</p>
       </a>
     </header>
   );
