@@ -45,6 +45,22 @@ function RegisterButton() {
 export default function HomePage() {
   return (
     <div className="items-center justify-center py-2 overflow-x-hidden">
+      <script
+				type="application/ld+json"
+				suppressHydrationWarning
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						description: "Viking Hacks website",
+						image: `https://vikinghacks.com/og?title=${"02.03.2024"}`,
+						url: `https://vikinghacks.com/`,
+						author: {
+							'@type': 'Person',
+							name: 'Viking Hacks',
+						},
+					}),
+				}}
+			/>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-40 mt-20 background-gradient pointer-events-auto">
         <a
