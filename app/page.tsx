@@ -23,6 +23,7 @@ function RegisterButton() {
   return (
     <Link
       className="
+      justify-center
       px-4 py-2
       text-md
     bg-blue-600 
@@ -38,7 +39,7 @@ function RegisterButton() {
       // className="bg-slate-700 ring-1 ring-yellow-200 rounded-3xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-slate-500 transition"
       href="/register"
     >
-      <span className="flex gap-2 items-center transition-all duration-75">
+      <span className="transition-all duration-75">
         Register for free
       </span>
     </Link>
@@ -157,7 +158,7 @@ export default function HomePage() {
           Viking Hacks is Irvington High School&apos;s very own annual hackathon, bringing together 100+ students from around the bay to build innovative projects and present their work to the community.
         </h2>
         <br />
-        <div className="flex flex-col sm:flex-row gap-1">
+        <div className="flex flex-col sm:flex-row gap-1 w-full justify-center">
           <RegisterButton />
           <SocialButton href="https://hcb.hackclub.com/donations/start/viking-hacks" target={"_blank"} name={"Donate"} icon={FiHeart} />
         </div>
