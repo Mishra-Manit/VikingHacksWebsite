@@ -32,7 +32,7 @@ export default function Footer() {
           <svg className="h-6 w-6 fill-gray-500 group-hover:fill-gray-300" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Z"></path></svg>
         </Link>
         <Link
-          href="https://github.com/viking-hacks"
+          href="https://github.com/Mishra-Manit/VikingHacksWebsite"
           className="group"
           aria-label="Github"
         >
