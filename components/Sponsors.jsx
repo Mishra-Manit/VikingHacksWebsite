@@ -50,7 +50,7 @@ export default function Sponsors({ }) {
                             alt={`Sponsor logo of ${sponsor.link}`}
                             width={sponsor.width}
                             height={sponsor.height}
-                            className="h-15 grayscale contrast-200 hover:scale-105 duration-200 sponsor-logo transition-all"
+                            className="h-15 grayscale contrast-200 hover:scale-105 opacity-80 duration-200 sponsor-logo transition-all"
                         />
                     </a>
                 ))}
