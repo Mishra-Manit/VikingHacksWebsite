@@ -4,19 +4,20 @@ import React, { useState } from 'react';
 const eventList = [
     {
         num: 2,
-        time: "7am",
-        info: "Opening Ceremony",
+        time: "7:30 am",
+        info: "Check-in",
         details: [
-            "Welcome speech, introduction of judges, mentors, and sponsors.",
-            "Overview of hackathon theme and rules."
+            "Check in at door.",
+            "Receive promotional items."
         ]
     },
     {
         num: 3,
         time: "8:30am",
-        info: "Team Finalization",
+        info: "Opening Ceremony",
         details: [
-            "Participants pitch their ideas.",
+            "Welcome speech, introduction of judges, mentors, and sponsors.",
+            "Overview of hackathon theme and rules.",
             "Finalization of teams."
         ]
     },
@@ -31,10 +32,10 @@ const eventList = [
     },
     {
         num: 5,
-        time: "11am",
-        info: "SFBU Workshop",
+        time: "TBD",
+        info: "Workshop 1",
         details: [
-            "Workshop presented by SFBU.",
+            "TBD.",
             "Topics relevant to the hackathon theme."
         ]
     },
@@ -49,11 +50,10 @@ const eventList = [
     },
     {
         num: 7,
-        time: "1pm",
-        info: "Hacking Continues",
+        time: "TBD",
+        info: "Workshop 2",
         details: [
-            "Teams dive back into their projects.",
-            "Optional mini-challenges or activities."
+            "TBD."
         ]
     },
     {
