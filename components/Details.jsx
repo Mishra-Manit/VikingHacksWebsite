@@ -20,7 +20,7 @@ export default function Details(props) {
                 We&apos;ll provide everything to make this the best experience possible.
             </p>
             <div className="py-4 sm:py-10">
-                <dl className="flex flex-col md:flex-row text-left gap-x-3 gap-y-3">
+                <dl className="flex flex-col justify-evenly md:flex-row text-left gap-x-3 gap-y-3">
                     {details.map((detail) => (
                         <div key={detail.id} className="
                         bg-neutral-700/20 
