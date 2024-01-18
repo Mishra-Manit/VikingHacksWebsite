@@ -1,6 +1,13 @@
 import Image from "next/image"
 const sponsors = [
     {
+        link: "https://sfbu.edu",
+        image: "/sponsors/SFBU_CIRCLE.png",
+        className: "invert",
+        width: 670,
+        height: 670,
+    },
+    {
         link: "https://artofproblemsolving.com",
         image: "/sponsors/aops_logo.png",
         width: 256,
@@ -11,12 +18,6 @@ const sponsors = [
         image: "/sponsors/Hack Club Flag.png",
         width: 526,
         height: 184,
-    },
-    {
-        link: "https://sfbu.edu",
-        image: "/sponsors/SFBU.png",
-        width: 670,
-        height: 670,
     },
     {
         link: "https://1password.com",
@@ -43,7 +44,7 @@ export default function Sponsors({ }) {
                         href={sponsor.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="h-full flex items-center justify-center"
+                        className={`h-full flex items-center justify-center ${sponsor.className || ''}`}
                     >
                         <Image
                             src={sponsor.image}
