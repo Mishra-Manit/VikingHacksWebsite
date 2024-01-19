@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: title,
   description: description,
   icons: {
-    icon: "/vikinghacks_newlogo.png",
+    icon: "/apple-touch-icon.png",
   },
   openGraph: {
     images: [ogimage],
