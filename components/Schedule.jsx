@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const eventList = [
     {
         num: 2,
-        time: "7:30 am",
+        time: "8am",
         info: "Check-in",
         details: [
             "Check in at door.",
