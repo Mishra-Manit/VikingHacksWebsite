@@ -8,6 +8,12 @@ const sponsors = [
         height: 670,
     },
     {
+        link: "https://greenlight.com",
+        image: "/sponsors/greenlightwhite.png",
+        width: 2500,
+        height: 750,
+    },
+    {
         link: "https://artofproblemsolving.com",
         image: "/sponsors/aops_logo.png",
         width: 256,
@@ -22,7 +28,7 @@ const sponsors = [
     {
         link: "https://1password.com",
         image: "/sponsors/1Password.png",
-        width: 907,
+        width: 700,
         height: 174,
     },
     {
