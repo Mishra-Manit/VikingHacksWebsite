@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const eventList = [
     {
         num: 2,
-        time: "8am",
+        time: "8 am",
         info: "Check-in",
         details: [
             "Check in at door.",
@@ -13,7 +13,7 @@ const eventList = [
     },
     {
         num: 3,
-        time: "8:30am",
+        time: "9 am",
         info: "Opening Ceremony",
         details: [
             "Welcome speech, introduction of judges, mentors, and sponsors.",
@@ -23,7 +23,7 @@ const eventList = [
     },
     {
         num: 4,
-        time: "9am",
+        time: "9:30 am",
         info: "Hacking Begins",
         details: [
             "Teams start on their projects.",
@@ -32,16 +32,15 @@ const eventList = [
     },
     {
         num: 5,
-        time: "TBD",
-        info: "Workshop 1",
+        time: "10 am",
+        info: "Intro to Web Dev",
         details: [
-            "TBD.",
-            "Topics relevant to the hackathon theme."
+            "Presented by Divyank Shah, President of UCR ACM"
         ]
     },
     {
         num: 6,
-        time: "12pm",
+        time: "12:30 pm",
         info: "Lunch Break",
         details: [
             "Lunch provided by us.",
@@ -50,23 +49,23 @@ const eventList = [
     },
     {
         num: 7,
-        time: "TBD",
-        info: "Workshop 2",
+        time: "1 pm",
+        info: "The Future of AI",
         details: [
-            "TBD."
+            "Presented by Professor Banafa from San Francisco Bay University."
         ]
     },
     {
         num: 8,
-        time: "5:30pm",
+        time: "6:30 pm",
         info: "Final Stretch of Hacking",
         details: [
-            "Teams finalize their projects.",
+            "Teams finalize their projects and submit.",
         ]
     },
     {
         num: 9,
-        time: "6pm",
+        time: "6:30 pm",
         info: "Dinner Break",
         details: [
             "Dinner and relaxation.",
