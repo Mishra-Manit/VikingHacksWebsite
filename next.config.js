@@ -14,6 +14,18 @@ module.exports = {
         destination: 'https://forms.gle/xfqgW4Naupcxi2GU8',
         permanent: true,
       },
+
+      {
+        source: '/feedback',
+        destination: 'https://docs.google.com/forms/d/e/1FAIpQLSdze1dziuFhXdycvcEn8kmp3qYV3FNp6sOUiNQtesRyeKVAYQ/viewform?usp=sf_link',
+        permanent: true,
+      },
+
+      {
+        source: '/greenlight',
+        destination: 'https://share.greenlight.com/25619981',
+        permanent: true,
+      },
     ]
   },
   images: {
