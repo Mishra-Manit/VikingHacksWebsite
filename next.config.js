@@ -26,6 +26,12 @@ module.exports = {
         destination: 'https://share.greenlight.com/25619981',
         permanent: true,
       },
+
+      {
+        source: '/photos',
+        destination: 'https://photos.app.goo.gl/xbdtsegKgpsz1Ytd9',
+        permanent: true,
+      },
     ]
   },
   images: {
