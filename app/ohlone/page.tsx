@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import StyledLink from './components/StyledLink';
 
 export default function Ohlone() {
     return (
@@ -15,9 +16,10 @@ export default function Ohlone() {
                         <span className="bg-lime-400 w-min px-2">
                             SPONSORS
                         </span>
-                        <Link href="/prospectus.pdf" target="_blank" className="w-max h-full hover:underline underline-offset-2 decoration-dotted decoration-2 decoration-neutral-500 after:content-['_↗']">
+                        <StyledLink href="/prospectus.pdf" target="_blank" text={"Review our prospectus"} className={"w-max"} arrow={true} />
+                        {/* <Link href="/prospectus.pdf" target="_blank" className="w-max h-full hover:underline underline-offset-2 decoration-dotted decoration-2 decoration-neutral-500 after:content-['_↗']">
                             Review our prospectus
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className="pointer-events-none font-mono text-[10vw] tracking-tighter leading-none mx-10">
                         We return. <br /> Ohlone awaits
@@ -60,9 +62,7 @@ export default function Ohlone() {
                 <div className="flex justify-between font-mono mx-10 my-1 text-lg">
                     <text>LATEST EVENT</text>
                     <text>IRVINGTON HIGH SCHOOL</text>
-                    <Link href="/photos" target="_blank" className="underline underline-offset-4 decoration-dotted decoration-neutral-500 after:content-['_↗']">
-                        View Photos
-                    </Link>
+                    <StyledLink href="/photos" target="_blank" text={"View Photos"} arrow={true} />
                 </div>
                 <div className="my-10">
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import StyledLink from "./StyledLink";
 import Link from 'next/link';
 
 const navItems = {
@@ -19,21 +20,15 @@ export default function Header() {
 				<Image
 					alt="Viking Hacks Logo"
 					src="/VH_SINGLE_LOGO_BLACK.png"
-					className="w-6"
+					className="w-6 select-none"
 					width={624}
 					height={769}
 				/>
 			</div>
-			<div className="flex">
+			<div className="flex gap-5">
 				{Object.entries(navItems).map(([path, { name }]) => {
 					return (
-						<Link
-							key={path}
-							href={path}
-							className="transition-all hover:underline decoration-2 decoration-dotted decoration-neutral-500 underline-offset-2 flex align-middle relative py-1 px-2"
-						>
-							{name}
-						</Link>
+						<StyledLink key={path} href={path} target={"_self"} text={name} arrow={false} />
 					);
 				})}
 			</div>
