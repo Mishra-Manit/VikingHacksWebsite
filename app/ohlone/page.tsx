@@ -60,8 +60,8 @@ export default function Ohlone() {
                     />
                 </div>
                 <div className="flex justify-between font-mono mx-10 my-1 text-lg">
-                    <text>LATEST EVENT</text>
-                    <text>IRVINGTON HIGH SCHOOL</text>
+                    <text className="">LATEST EVENT</text>
+                    <text className="hidden sm:block">IRVINGTON HIGH SCHOOL</text>
                     <StyledLink href="/photos" target="_blank" text={"View Photos"} arrow={true} />
                 </div>
                 <div className="my-10">
