@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 export default function Ohlone() {
     return (
@@ -26,7 +27,7 @@ export default function Ohlone() {
                 {/* this is register + first section */}
                 <div className="mt-10">
                     <div className="flex flex-col sm:flex-row gap-2 mx-10">
-                        <Link href="/register" target="_blank" className="px-5 text-lg py-3 font-mono bg-lime-400 hover:bg-lime-300">
+                        <Link href="/register" target="_blank" className="px-5 text-lg py-3 font-mono bg-lime-400 hover:bg-lime-300 hover:shadow-[0_0_15px_0_rgba(163,230,53,0.5)]">
                             REGISTER NOW
                         </Link>
                         <Link href="/register" target="_blank" className="border px-5 text-lg py-3 font-mono hover:bg-black hover:text-white hover:border-transparent">
@@ -47,7 +48,7 @@ export default function Ohlone() {
             <div className="my-10">
                 <div className="h-[70vh] mx-10 overflow-hidden relative hue-rotate-[20deg] brightness-125 transition-all">
                     <Image
-                        src="group_photo.jpg"
+                        src="/group_photo.jpg"
                         alt="2024 Group Photo"
                         fill
                         style={{
@@ -64,6 +65,7 @@ export default function Ohlone() {
                     </Link>
                 </div>
             </div>
+            <Footer />
         </main>
     )
 }
