@@ -47,7 +47,7 @@ export default function Ohlone() {
             <div className="my-10">
                 <div className="h-[70vh] mx-10 overflow-hidden relative hue-rotate-[20deg] brightness-125 transition-all">
                     <Image
-                        src="/VH_GROUP_PHOTO.jpg"
+                        src="group_photo.jpg"
                         alt="2024 Group Photo"
                         fill
                         style={{
