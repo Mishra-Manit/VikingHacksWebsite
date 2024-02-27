@@ -48,7 +48,7 @@ export default function Ohlone() {
                 <div className="h-[70vh] mx-10 overflow-hidden relative hue-rotate-[20deg] brightness-125 transition-all">
                     <Image
                         src="/VH_GROUP_PHOTO.jpg"
-                        alt="Taylor Swift Image"
+                        alt="2024 Group Photo"
                         fill
                         style={{
                             objectFit: "cover",
