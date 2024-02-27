@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from 'next/link';
 
 const navItems = {
@@ -11,8 +12,17 @@ const navItems = {
 export default function Header() {
 	return (
 		<div className="w-full px-10 py-6 border-b shadow-[0_0_15px_0_rgba(0,0,0,0.1)] font-mono font-light flex justify-between items-center">
-			<div className="bg-black text-white px-2">
+			<div className="hidden sm:block">
 				VIKING HACKS
+			</div>
+			<div>
+				<Image
+					alt="Viking Hacks Logo"
+					src="/VH_SINGLE_LOGO_BLACK.png"
+					className="w-6"
+					width={624}
+					height={769}
+				/>
 			</div>
 			<div className="flex">
 				{Object.entries(navItems).map(([path, { name }]) => {
