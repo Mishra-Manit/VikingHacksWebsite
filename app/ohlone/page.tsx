@@ -45,24 +45,27 @@ export default function Ohlone() {
                 </div>
             </div>
             {/* rest of the sections */}
-            <div className="my-10">
-                <div className="h-[70vh] mx-10 overflow-hidden relative hue-rotate-[20deg] brightness-125 transition-all">
+            <div className="">
+                <div className="h-[54vh] mx-10 overflow-hidden relative brightness-125 transition-all">
                     <Image
                         src="/group_photo.jpg"
                         alt="2024 Group Photo"
                         fill
                         style={{
                             objectFit: "cover",
-                            objectPosition: "50% 90%"
+                            objectPosition: "50% 100%"
                         }}
                     />
                 </div>
-                <div className="flex justify-between font-mono mx-10 my-10 text-lg">
+                <div className="flex justify-between font-mono mx-10 my-1 text-lg">
                     <text>LATEST EVENT</text>
                     <text>IRVINGTON HIGH SCHOOL</text>
                     <Link href="/photos" target="_blank" className="underline underline-offset-4 decoration-dotted decoration-neutral-500 after:content-['_↗']">
                         View Photos
                     </Link>
+                </div>
+                <div className="my-10">
+
                 </div>
             </div>
             <Footer />
