@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes blinkcursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 1ch;
+  background-color: currentColor;
+  animation: blinkcursor 0.75s step-end infinite alternate;
+}
+
 @media (min-width: 400px) {
   .background-gradient::before {
     background: radial-gradient(
