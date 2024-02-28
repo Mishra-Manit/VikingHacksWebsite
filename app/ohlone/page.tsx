@@ -8,7 +8,7 @@ export default function Ohlone() {
     return (
         <main className="bg-white text-black min-h-screen w-full overscroll-y-none overflow-x-hidden">
             {/* hero section */}
-            <div className="h-screen flex flex-col justify-between">
+            <div className="h-screen min-h-[600px] flex flex-col justify-between">
                 {/* this is the big text */}
                 <div className="">
                     <Header />
