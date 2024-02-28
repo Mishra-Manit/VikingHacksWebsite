@@ -32,7 +32,7 @@ export default function Ohlone() {
                 <div className="mt-10">
                     <div className="flex flex-col sm:flex-row gap-2 mx-10">
                         <Link href="/register" target="_blank" className="rounded-full px-5 text-lg py-3 bg-lime-400 hover:bg-lime-300 hover:shadow-[0_0_15px_0_rgba(163,230,53,0.5)] transition-all">
-                            Register Now
+                            Register now for free
                         </Link>
                         <Link href="/register" target="_blank" className="rounded-full border px-5 text-lg py-3 hover:bg-black hover:text-white hover:border-transparent transition-all">
                             Donate

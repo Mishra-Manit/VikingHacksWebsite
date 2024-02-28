@@ -11,6 +11,7 @@ module.exports = {
         '2xs': '0.3rem',
       },
       fontFamily: {
+        sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
       },
       screens: {
