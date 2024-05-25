@@ -3,12 +3,19 @@ import Link from "next/link";
 
 // components
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
     <>
       <main className="min-h-screen h-full bg-black">
         <Header />
+        <div className="border -mt-[1px] m-12 border-neutral-800 p-12">
+          <div className="border border-neutral-800 border-container h-40 w-full">
+
+          </div>
+        </div>
+        <Footer />
       </main>
     </>
   )

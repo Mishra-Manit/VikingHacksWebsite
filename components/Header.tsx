@@ -37,31 +37,36 @@ function ArrowIcon(props: { size: number, rotation: number }) {
     );
 }
 
+
 export default function Header() {
-    return <header className="sticky top-0 z-50 px-12 py-6 flex items-center justify-between border-b border-neutral-800">
-        <text className="hidden md:block font-mono font-light text-sm text-neutral-400">FEB 4 2025, FREMONT</text>
-        <h1 className={`text-lg ${pixelify_sans.className}`}>Viking Hacks</h1>
-        <div className="flex font-mono text-sm">
-            {Object.entries(navItems).map(([path, { name }]) => {
-                return (
-                    <Link key={path} href={path} target={"_self"} className="
-                    flex
-                    items-center
-                    gap-x-2
-                    text-black
-                    bg-white
-                    rounded-lg
-                    px-5
-                    py-1
-                    hover:ring
-                    ring-neutral-700
-                    ring-offset-black
-                    ring-offset-2
-                    ">{name}
-                    <ArrowIcon rotation={45} size={10} />
-                    </Link>
-                );
-            })}
-        </div>
-    </header>
+    return (
+        <header className="sticky top-0 z-50 bg-black px-12 py-6 flex items-center justify-between w-full border-b border-neutral-800">
+            <div className="hidden flex-1 grow md:block">
+                <span className="font-mono font-light text-sm text-neutral-400">FEB 4 2025, FREMONT</span>
+            </div>
+            <h1 className={`mx-auto text-lg ${pixelify_sans.className}`}>Viking Hacks</h1>
+            <div className="flex-grow flex-1 flex justify-end font-mono text-sm">
+                {Object.entries(navItems).map(([path, { name }]) => {
+                    return (
+                        <Link key={path} href={path} target={"_self"} className="
+                        flex
+                        items-center
+                        gap-x-2
+                        text-black
+                        bg-white
+                        rounded-lg
+                        px-5
+                        py-1
+                        hover:ring
+                        ring-neutral-700
+                        ring-offset-black
+                        ring-offset-2
+                        ">{name}
+                        <ArrowIcon rotation={45} size={10} />
+                        </Link>
+                    );
+                })}
+            </div>
+        </header>
+    );
 }

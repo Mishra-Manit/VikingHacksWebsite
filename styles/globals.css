@@ -78,3 +78,48 @@
   width: auto;
   object-fit: contain;
 }
+
+@layer components {
+  .border-container {
+    position: relative;
+  }
+  .border-container::before,
+  .border-container::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+  }
+  .border-container::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+  .border-container::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+  .border-container::before::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+  }
+  .border-container::before::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+  .border-container::before::after {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+}
