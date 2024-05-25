@@ -4,8 +4,8 @@ import React from 'react';
 import { Widget } from '@typeform/embed-react'
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import Footer from "../../old-components/Footer";
+import Header from "../../old-components/Header";
 
 import { AiFillMail } from 'react-icons/ai';
 

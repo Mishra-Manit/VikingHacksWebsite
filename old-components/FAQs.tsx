@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillMail } from 'react-icons/ai';
 import FAQ from './FAQ';
-import SquigglyLines from "../components/SquigglyLines";
+import SquigglyLines from "./SquigglyLines";
 
 const faqsData = [
   {
