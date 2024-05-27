@@ -81,6 +81,7 @@
 
 @layer components {
   .border-container {
+    z-index: 1000;
     position: relative;
   }
   .border-container::before,
