@@ -13,7 +13,7 @@ export default function HomePage() {
         <Header />
         <div className="border -mt-[1px] m-12 border-neutral-800 p-12">
           {/* main container */}
-          <div className="flex flex-col lg:flex-row border border-neutral-800 border-container p-1 h-[60vh] w-full">
+          <div className="flex flex-col lg:flex-row border border-neutral-800 border-container p-1 h-[60vh] w-full z-[2]">
             <div className="h-full w-full lg:w-[62%] overflow-hidden relative transition-all">
               <Image
                 src={"/eventcenter1.jpeg"}
@@ -34,6 +34,10 @@ export default function HomePage() {
             <h2 className="font-mono text-lg text-neutral-300">in prizes</h2>
           </div>
           <DottedLine />
+          <section className="flex justify-between py-20 items-end font-sans font-normal">
+            <span className="text-[32px] md:text-[64px]">Sponsors</span>
+            <span className="text-[20px] md:text-[26px] font-light">Partners</span>
+          </section>
         </div>
         <Footer />
       </main>
