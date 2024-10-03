@@ -12,6 +12,10 @@
   }
 }
 
+::selection {
+  @apply bg-[#005BE7] text-white
+}
+
 .typing-cursor {
   display: inline-block;
   width: 1ch;
