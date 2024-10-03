@@ -46,13 +46,6 @@ export default function HomePage() {
               </div>
             </Link>
           </div>
-          {/* <div className="my-20">
-            <span className="bg-black text-white font-mono py-1 px-4 uppercase tracking-wider">About</span>
-            <hr className="mt-4 border-t border-dashed border-blue-300" />
-            <h2 className="text-black font-medium text-[5vw] md:text-[4vw] tracking-[-0.05em] my-10">
-              <Balancer>Join a community of developers and innovators at Viking Hacks 2025 for a day of learning, creativity, and collaboration as we build solutions to real-world challenges together.</Balancer>
-            </h2>
-          </div> */}
           <div className="my-20">
             <span className="bg-black text-white font-mono py-1 px-4 uppercase tracking-wider">About</span>
             <hr className="mt-4 border-t border-dashed border-blue-300" />
@@ -95,7 +88,7 @@ export default function HomePage() {
                     <svg
                       className="absolute right-0 -bottom-[6px] w-[70%] scale-x-[-1]"
                       fill="none"
-                      height={18}
+                      height={18} 
                       viewBox="0 0 263 18"
                       width={263}
                       xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +98,7 @@ export default function HomePage() {
                         fill="#0057FF"
                       />
                     </svg>
-                    <span className="inline-block pointer-events-none -mb-[0.1rem] md:-mb-1 font-mono font-medium tracking-wide uppercase text-[10px] md:text-[13px] text-primaryColor">
+                    <span className="inline-block pointer-events-none -mb-[0.02rem] md:-mb-1 font-mono font-medium tracking-wide uppercase text-[10px] md:text-[13px] text-primaryColor">
                       For a cause
                     </span>
                   </div>
@@ -114,11 +107,33 @@ export default function HomePage() {
               </Balancer>
             </h2>
           </div>
-          <hr className="border-t border-dashed border-blue-300" />
-          <section className="flex justify-between text-black py-20 items-end font-sans font-normal">
-            <span className="text-[32px] md:text-[64px] leading-none tracking-tighter">Sponsors</span>
-            <span className="text-[20px] md:text-[26px] font-light leading-non tracking-tight">Partners</span>
+          {/* Prizes preview */}
+          <div className="my-20">
+          </div>
+          {/* FAQ section */}
+          <div className="flex flex-col md:flex-row my-20 w-full">
+            {/* sticky section :> */}
+            <div className="text-black flex flex-col gap-5 w-full md:w-[40%]">
+              <Balancer className="font-medium -tracking-[0.05em] text-[10vw] md:text-[4vw] leading-none">Frequently<br/>Asked Questions</Balancer>
+              <text className="hidden md:block font-mono font-regular uppercase text-xs">Contact
+                <a href="mailto:hello@vikinghacks.com" className="ml-2 mr-1 text-primaryColor">
+                hello@vikinghacks.com
+                </a>
+                <svg className="inline-block mb-[0.05rem]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+              </text>
+            </div>
+            {/* question list */}
+            <div className="w-[60%] border-y border-dashed border-y-blue-300 divide-y divide-dashed divide-blue-300 text-black">
+              <div className="">
+                h
+              </div>
+            </div>
+          </div>
+          <section className="flex justify-between text-black py-20 items-end">
+            <span className="text-[10vw] md:text-[4vw] font-medium leading-none tracking-tighter">Sponsors</span>
+            {/* <span className="text-[20px] md:text-[26px] font-light leading-non tracking-tight">Partners</span> */}
           </section>
+          <div className="w-full h-screen"></div>
         </div>
         <Footer />
       </main>
