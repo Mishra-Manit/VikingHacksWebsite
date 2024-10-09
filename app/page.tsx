@@ -13,6 +13,24 @@ function ArrowIcon() {
   );
 }
 
+const FAQList = {
+  'What is Viking Hacks?': {
+    answer: "Viking Hacks is Irvington High School's very own hackathon, designed to bring together students with a passion for technology and innovation."
+  },
+  'Who can participate in Viking Hacks?': {
+    answer: "The hackathon is open to all high school students who are interested in creating, learning, and exploring the world of technology."
+  },
+  'Do I need to have coding experience to join?': {
+    answer: "No prior coding experience is required. We encourage students of all skill levels to participate and learn."
+  },
+  'What should I bring to the hackathon?': {
+    answer: "Participants should bring their own laptop, charger, and any other tech they plan to use. Food and drinks will be provided."
+  },
+  'Is there a cost to attend Viking Hacks?': {
+    answer: "Viking Hacks is completely free for all participants, thanks to our sponsors."
+  }
+}
+
 export default function HomePage() {
   return (
     <>
@@ -113,7 +131,7 @@ export default function HomePage() {
           {/* FAQ section */}
           <div className="flex flex-col md:flex-row my-20 w-full">
             {/* sticky section :> */}
-            <div className="text-black flex flex-col gap-5 w-full md:w-[40%]">
+            <div className="text-black flex flex-col gap-5 w-full lg:w-[40%]">
               <Balancer className="font-medium -tracking-[0.05em] text-[10vw] md:text-[4vw] leading-none">Frequently<br/>Asked Questions</Balancer>
               <text className="hidden md:block font-mono font-regular uppercase text-xs">Contact
                 <a href="mailto:hello@vikinghacks.com" className="ml-2 mr-1 text-primaryColor">
@@ -123,10 +141,22 @@ export default function HomePage() {
               </text>
             </div>
             {/* question list */}
-            <div className="w-[60%] border-y border-dashed border-y-blue-300 divide-y divide-dashed divide-blue-300 text-black">
-              <div className="">
-                h
-              </div>
+            <div className="w-full mt-5 lg:mt-0 lg:w-[60%] border-y border-dashed border-y-blue-300 divide-y divide-dashed divide-blue-300 text-black">
+            {Object.entries(FAQList).map(([question, { answer }]) => {
+                    return (
+                      <button className="group p-5 flex flex-col gap-2 justify-center w-full py-10">
+                        <div className="flex items-center gap-2">
+                          <svg className="group-active:rotate-90" fill="#000000" width="20px" height="20px" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polygon fillRule="evenodd"
+                              points="17.586 13 3 13 3 11 17.586 11 11.293 4.707 12.707 3.293 21.414 12 12.707 20.707 11.293 19.293" />
+                          </svg>
+                          <h1 className="text-lg font-medium -tracking-[0.05rem text-left">{question}</h1>
+                        </div>
+                        <h2 className="hidden group-active:block text-left">{answer}</h2>
+                      </button>
+                    );
+                })}
             </div>
           </div>
           <section className="flex justify-between text-black py-20 items-end">
