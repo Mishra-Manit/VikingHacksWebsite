@@ -83,10 +83,10 @@ export default function Header() {
                     ></div>
                 </div>
             </div>
-            <div className="flex-1 grow z-10 select-none">
-                <div className="h-10 w-[6.2rem]">
-                    <Image src="/viking_logo_transparent.png" alt="Viking Hacks Logo" height={559} width={214} layout="responsive"/>
-                </div>
+            <div className="flex-1 grow z-10">
+                <a className="block h-10 w-[6.2rem]" target="_self" href="/">
+                    <Image src="/viking_logo_transparent.png" alt="Viking Hacks Logo" height={37.97} width={99.2} layout="responsive"/>
+                </a>
             </div>
             <div className="flex-grow flex-1 flex z-10 justify-end h-full font-mono font-light text-sm">
                 {Object.entries(navItems).map(([path, { name }]) => {

@@ -144,7 +144,7 @@ export default function HomePage() {
             <div className="w-full mt-5 lg:mt-0 lg:w-[60%] border-y border-dashed border-y-blue-300 divide-y divide-dashed divide-blue-300 text-black">
             {Object.entries(FAQList).map(([question, { answer }]) => {
                     return (
-                      <button className="group p-5 flex flex-col gap-2 justify-center w-full py-10">
+                      <button key={question} className="group p-5 flex flex-col gap-2 justify-center w-full py-10">
                         <div className="flex items-center gap-2">
                           <svg className="group-active:rotate-90" fill="#000000" width="20px" height="20px" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">

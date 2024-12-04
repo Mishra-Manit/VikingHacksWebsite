@@ -4,14 +4,18 @@ import React from 'react';
 import { Widget } from '@typeform/embed-react'
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "../../old-components/Footer";
-import Header from "../../old-components/Header";
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
+// import Footer from "../../old-components/Footer";
+// import Header from "../../old-components/Header";
 
 import { AiFillMail } from 'react-icons/ai';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="flex max-w-7xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="pb-10 min-h-screen h-full">
       <script
 				type="application/ld+json"
 				suppressHydrationWarning
@@ -29,8 +33,7 @@ const ComingSoon: React.FC = () => {
 				}}
 			/>
       <Header />
-      
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20">
+      {/* <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20">
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-neutral-0 sm:text-7xl">
           Registration
         </h1>
@@ -52,9 +55,10 @@ const ComingSoon: React.FC = () => {
           </a> {" "}
           with any questions or concerns
         </h2>
-      </main>
+      </main> */}
 
-      <Widget id="zNPxh3gU" style={{width: '80%', height: '600px'}} className="Viking Hacks Registration Form" />
+      {/* <Widget id="zNPxh3gU" style={{width: '80%', height: '600px'}} className="Viking Hacks Registration Form" /> */}
+      <iframe className="airtable-embed bg-transparent" src="https://airtable.com/embed/appeGVZj2ycWs8L6r/pagHioSdm30pXIt5R/form" frameBorder="0" onMouseWheel="" width="100%" height="1000"></iframe>
 
       <Footer />
     </div>
