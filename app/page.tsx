@@ -40,7 +40,7 @@ export default function HomePage() {
           {/* main container */}
           <div className="h-[60vh] w-full overflow-hidden relative transition-all">
             <Image
-              src={"/eventcenter1.jpeg"}
+              src={"/IHS_PHOTO1.jpg"}
               alt={"Fremont Downtown Event Center"}
               fill
               style={{
@@ -52,7 +52,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row my-20 justify-between lg:items-center">
             <div className="flex flex-col text-black">
               <h1 className="tracking-[-0.07em] font-medium text-[9vw] sm:text-[8vw] lg:text-[5.5vw] leading-[1.1]">Viking Hacks is here.</h1>
-              <text className="font-mono text-[4vw] sm:text-[2.5vw] lg:text-[1.5vw] uppercase">January 10th - Fremont, CA.</text>
+              <text className="font-mono text-[4vw] sm:text-[2.5vw] lg:text-[1.5vw] uppercase">February 15th - Fremont, CA.</text>
             </div>
             <Link href={"/register"} target={"_self"} className="group mt-5 lg:mt-0 flex font-mono items-center justify-center gap-x-2 text-white bg-[rgb(0,87,255)] px-10 md:px-32 text-2xl py-1 h-24">
               <div className="flex flex-col">
