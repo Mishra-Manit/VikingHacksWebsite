@@ -28,14 +28,14 @@ export async function GET(req) {
           style={{
             marginLeft: 190,
             marginRight: 190,
-            paddingTop: '10%',
+            paddingTop: '9%',
             display: 'flex',
             fontSize: 200,
             fontFamily: 'Geist',
             letterSpacing: '-0.05em',
             fontStyle: 'normal',
-            color: 'white',
-            lineHeight: '120px',
+            color: 'black',
+            lineHeight: '170px',
             whiteSpace: 'pre-wrap',
           }}
         >

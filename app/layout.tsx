@@ -46,7 +46,7 @@ export default function RootLayout({
 			GeistSans.variable,
 			GeistMono.variable
 		)}>
-      <body className="text-black bg-black">
+      <body className="text-white bg-white">
         {children}
         <Analytics />
       </body>
