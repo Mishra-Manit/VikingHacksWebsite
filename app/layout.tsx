@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 let title = "Viking Hacks";
 let description = "Join us for the first hackathon hosted at Irvington High School";
-let ogimage = `https://vikinghacks.com/og?title=${"02.03.2024"}`;
+let ogimage = `https://vikinghacks.com/og?title=${"02/15/25"}`;
 let sitename = "vikinghacks.com";
 
 import { GeistSans } from 'geist/font/sans';

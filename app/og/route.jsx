@@ -21,7 +21,7 @@ export async function GET(req) {
           flexDirection: 'column',
           // alignItems: 'flex-start',
           justifyContent: 'flex-start',
-          backgroundImage: 'url(https://vikinghacks.com/vh_og_bg.png)',
+          backgroundImage: 'url(https://vikinghacks.com/vh_new_og_bg.png)',
         }}
       >
         <div
