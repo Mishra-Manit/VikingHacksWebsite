@@ -4,6 +4,8 @@ import Link from "next/link";
 // components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FAQ from "../components/FAQ";
+import Sponsors from "../components/Sponsors";
 import { Balancer } from "react-wrap-balancer";
 import DottedLine from "../components/DottedLine";
 
@@ -30,6 +32,30 @@ const FAQList = {
     answer: "Viking Hacks is completely free for all participants, thanks to our sponsors."
   }
 }
+
+const partners = [
+  { 
+    name: "Supabase", 
+    logo: "https://assets.basehub.com/8da07b60/4ccbdd65a970c44c2c99cacdf552000b/supabase.svg", 
+    link: "https://supabase.io"
+  },
+];
+
+const diamond = [
+  { 
+    name: "Supabase", 
+    logo: "https://assets.basehub.com/8da07b60/4ccbdd65a970c44c2c99cacdf552000b/supabase.svg", 
+    link: "https://supabase.io"
+  },
+];
+
+const gold = [
+  { 
+    name: "Supabase", 
+    logo: "https://assets.basehub.com/8da07b60/4ccbdd65a970c44c2c99cacdf552000b/supabase.svg", 
+    link: "https://supabase.io"
+  },
+];
 
 export default function HomePage() {
   return (
@@ -65,7 +91,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="my-20">
-            <span className="bg-black text-white font-mono py-1 px-4 uppercase tracking-wider">About</span>
+            <span className="bg-black text-white font-mono py-[0.1rem] px-4 uppercase tracking-wider">About</span>
             <hr className="mt-4 border-t border-dashed border-blue-300" />
             <h2 className="text-black font-medium text-[5vw] md:text-[4vw] tracking-[-0.05em] my-10 leading-[2.5] md:leading-[2] lg:leading-normal">
               <Balancer>
@@ -129,41 +155,42 @@ export default function HomePage() {
           <div className="my-20">
           </div>
           {/* FAQ section */}
-          <div className="flex flex-col md:flex-row my-20 w-full">
-            {/* sticky section :> */}
-            <div className="text-black flex flex-col gap-5 w-full lg:w-[40%]">
-              <Balancer className="font-medium -tracking-[0.05em] text-[10vw] md:text-[4vw] leading-none">Frequently<br/>Asked Questions</Balancer>
-              <text className="hidden md:block font-mono font-regular uppercase text-xs">Contact
-                <a href="mailto:hello@vikinghacks.com" className="ml-2 mr-1 text-primaryColor">
-                hello@vikinghacks.com
-                </a>
-                <svg className="inline-block mb-[0.05rem]" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
-              </text>
+          <div className="flex flex-col md:flex-row my-20 md:mt-40 w-full">
+            {/* Sticky FAQ section */}
+            <div className="sticky-container block w-full lg:min-w-[40%] lg:w-[40%]">
+              <div className="sticky top-32 flex flex-col text-black gap-5">
+                <Balancer className="font-medium -tracking-[0.05em] text-[10vw] md:text-[4vw] leading-none">
+                  Frequently<br />Asked Questions
+                </Balancer>
+                <p className="hidden md:block font-mono font-regular uppercase text-xs">
+                  Contact
+                  <a href="mailto:hello@vikinghacks.com" className="ml-2 mr-1 text-primaryColor">
+                    hello@vikinghacks.com
+                  </a>
+                  <svg
+                    className="inline-block mb-[0.05rem]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
+                  </svg>
+                </p>
+              </div>
             </div>
-            {/* question list */}
-            <div className="w-full mt-5 lg:mt-0 lg:w-[60%] border-y border-dashed border-y-blue-300 divide-y divide-dashed divide-blue-300 text-black">
-            {Object.entries(FAQList).map(([question, { answer }]) => {
-                    return (
-                      <button key={question} className="group p-5 flex flex-col gap-2 justify-center w-full py-10">
-                        <div className="flex items-center gap-2">
-                          <svg className="group-active:rotate-90" fill="#000000" width="20px" height="20px" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <polygon fillRule="evenodd"
-                              points="17.586 13 3 13 3 11 17.586 11 11.293 4.707 12.707 3.293 21.414 12 12.707 20.707 11.293 19.293" />
-                          </svg>
-                          <h1 className="text-lg font-medium -tracking-[0.05rem text-left">{question}</h1>
-                        </div>
-                        <h2 className="hidden group-active:block text-left">{answer}</h2>
-                      </button>
-                    );
-                })}
+
+            {/* FAQ list */}
+            <div className="flex-grow">
+              <FAQ FAQList={FAQList} />
             </div>
           </div>
-          <section className="flex justify-between text-black py-20 items-end">
-            <span className="text-[10vw] md:text-[4vw] font-medium leading-none tracking-tighter">Sponsors</span>
-            {/* <span className="text-[20px] md:text-[26px] font-light leading-non tracking-tight">Partners</span> */}
-          </section>
-          <div className="w-full h-screen"></div>
+          {/* <section className="flex justify-between text-black py-20 items-end">
+            // <span className="text-[10vw] md:text-[4vw] font-medium leading-none tracking-tighter">Sponsors</span>
+          </section> */}
+           <Sponsors partners={partners} diamond={diamond} gold={gold} />
+          {/* <div className="w-full h-screen"></div> */}
         </div>
         <Footer />
       </main>

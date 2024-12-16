@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Widget } from '@typeform/embed-react'
 import Image from "next/image";
 import Link from "next/link";
@@ -14,8 +14,32 @@ import Footer from "../../components/Footer";
 import { AiFillMail } from 'react-icons/ai';
 
 const ComingSoon: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  useEffect(() => {
+    const handleResizeMessage = (event: MessageEvent) => {
+      // Ensure the message is from Airtable
+      if (typeof event.data === "object" && event.origin.includes("airtable.com")) {
+        const { type, payload } = event.data as { type: string; payload: { height: number } };
+
+        // Check if the message is about resizing the iframe
+        if (type === "embedFrameResize" && iframeRef.current) {
+          iframeRef.current.style.height = `${payload.height}px`;
+        }
+      }
+    };
+
+    // Listen for messages from the Airtable iframe
+    window.addEventListener("message", handleResizeMessage);
+
+    return () => {
+      window.removeEventListener("message", handleResizeMessage);
+    };
+  }, []);
+  
   return (
-    <div className="pb-10 min-h-screen h-full">
+    <div className="min-h-screen">
       <script
 				type="application/ld+json"
 				suppressHydrationWarning
@@ -58,9 +82,23 @@ const ComingSoon: React.FC = () => {
       </main> */}
 
       {/* <Widget id="zNPxh3gU" style={{width: '80%', height: '600px'}} className="Viking Hacks Registration Form" /> */}
-      <iframe className="airtable-embed bg-transparent" src="https://airtable.com/embed/appeGVZj2ycWs8L6r/pagHioSdm30pXIt5R/form" frameBorder="0" onMouseWheel="" width="100%" height="1000"></iframe>
+      <div className="">
+        {isLoading && (
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-2 justify-center items-center bg-gray-100 z-10">
+            <h1 className="text-xl text-black font-mono">Please wait</h1>
+            <div className="w-1/5 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+          </div>
+        )}
 
-      <Footer />
+        <iframe
+          className={`airtable-embed bg-transparent w-full h-[1500px] md:h-[1500px] ${isLoading ? 'hidden' : 'block'}`}
+          src="https://airtable.com/embed/appeGVZj2ycWs8L6r/pagHioSdm30pXIt5R/form"
+          frameBorder="0"
+          onLoad={() => setIsLoading(false)}
+        ></iframe>
+      </div>
+
+      {/* <Footer /> */}
     </div>
   );
 };

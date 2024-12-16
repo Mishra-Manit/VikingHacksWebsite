@@ -4,11 +4,25 @@ module.exports = {
   redirects: async() => {
     return [
       {
+        source: '/guest-pass',
+        destination: '/files/guest-pass.pdf',
+        permanent: true,
+      },
+      {
+        source: '/medical-form',
+        destination: '/files/medical.pdf',
+        permanent: true,
+      },
+      {
+        source: '/prospectus',
+        destination: '/files/prospectus.pdf',
+        permanent: true,
+      },
+      {
         source: '/donate',
         destination: 'https://hcb.hackclub.com/donations/start/viking-hacks',
         permanent: true,
       },
-
       {
         source: '/python',
         destination: 'https://forms.gle/xfqgW4Naupcxi2GU8',
