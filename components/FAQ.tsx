@@ -27,9 +27,9 @@ export default function FAQSection({ FAQList }: FAQListProps) {
 						className="p-5 flex flex-col gap-2 w-full py-10"
 						onClick={() => toggleQuestion(question)}
 					>
-						<div className="flex items-center gap-2">
+						<div className="flex items-start gap-2">
 							<svg
-								className={`transition-transform duration-100 ${isOpen ? "rotate-90" : ""
+								className={`transition-transform duration-100 mt-1 min-w-[20px] ${isOpen ? "rotate-90" : ""
 									}`}
 								fill="#000000"
 								width="20px"
